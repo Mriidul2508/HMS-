@@ -1,8 +1,0 @@
-[build]
-  base = "."
-  command = "python freeze.py"
-  publish = "build/"
-  functions = "netlify/functions"
-
-[build.environment]
-  PYTHON_VERSION = "3.8"  # Specify the Python version
