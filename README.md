@@ -47,10 +47,11 @@ The **Hospital Management System (HMS)** is a web-based application designed to 
    git clone https://github.com/yourusername/hospital-management-system.git
    cd hospital-management-system
 2. Create a virtual environment:
+   '''bash
    python -m venv venv
    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-3. Install the required packages:
+4. Install the required packages:
    pip install -r requirements.txt
-4. Run the Application:
+5. Run the Application:
    python app.py
    
