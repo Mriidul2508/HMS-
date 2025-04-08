@@ -6,6 +6,10 @@ import os
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
+
+@app.errorhandler(500)
+def internal_error(error):
+    return "500 error: Internal Server Error", 500
     
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
