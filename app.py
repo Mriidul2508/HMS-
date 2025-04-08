@@ -2,7 +2,11 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 from models import db, Patient, Doctor, Appointment, User
 from werkzeug.security import generate_password_hash, check_password_hash
+import os
 
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
+    
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
